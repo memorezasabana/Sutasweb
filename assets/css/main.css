@@ -20,7 +20,7 @@
 /* Colors */
 :root {
   --color-default: #222222;
-  --color-primary: #008374;
+  --color-primary: #0077b6;
   --color-secondary: #f85a40;
 }
 
@@ -240,7 +240,7 @@ section {
 # Header
 --------------------------------------------------------------*/
 .topbar {
-  background: #00796b;
+  background: #0077b6;
   height: 40px;
   font-size: 14px;
   transition: all 0.5s;
@@ -497,7 +497,7 @@ section {
     inset: 0;
     padding: 50px 0 10px 0;
     margin: 0;
-    background: rgba(0, 131, 116, 0.9);
+    background: #0077b6;
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
@@ -543,7 +543,7 @@ section {
   .navbar .getstarted:hover,
   .navbar .getstarted:focus:hover {
     color: #fff;
-    background: rgba(0, 131, 116, 0.8);
+    background: #0077b6;
   }
 
   .navbar .dropdown ul,
@@ -553,8 +553,8 @@ section {
     padding: 10px 0;
     margin: 10px 20px;
     transition: all 0.5s ease-in-out;
-    background-color: #007466;
-    border: 1px solid #006459;
+    background-color: #0077b6;
+    border: 1px solid #016da7;
   }
 
   .navbar .dropdown>.dropdown-active,
@@ -658,7 +658,7 @@ section {
 .about .play-btn {
   width: 94px;
   height: 94px;
-  background: radial-gradient(var(--color-primary) 50%, rgba(0, 131, 116, 0.4) 52%);
+  background: radial-gradient(var(--color-primary) 50%, #0077b6 52%);
   border-radius: 50%;
   display: block;
   position: absolute;
@@ -679,7 +679,7 @@ section {
   animation-timing-function: steps;
   opacity: 1;
   border-radius: 50%;
-  border: 5px solid rgba(0, 131, 116, 0.7);
+  border: 5px solid rgba(54, 120, 226, 0.7);
   top: -15%;
   left: -15%;
   background: rgba(198, 16, 0, 0);
@@ -811,7 +811,7 @@ section {
 # Call To Action Section
 --------------------------------------------------------------*/
 .call-to-action .container {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cta-bg.jpg") center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.bnpb.go.id/storage/app/media/uploads/new/news/OcxjvG0ntCNi.jpeg") center center;
   background-size: cover;
   padding: 100px 60px;
   border-radius: 15px;
@@ -834,7 +834,7 @@ section {
   width: 94px;
   height: 94px;
   margin-bottom: 20px;
-  background: radial-gradient(var(--color-primary) 50%, rgba(0, 131, 116, 0.4) 52%);
+  background: radial-gradient(var(--color-primary) 50%, rgba(0, 121, 201, 0.4) 52%);
   border-radius: 50%;
   display: inline-block;
   position: relative;
@@ -853,7 +853,7 @@ section {
   animation-timing-function: steps;
   opacity: 1;
   border-radius: 50%;
-  border: 5px solid rgba(0, 131, 116, 0.7);
+  border: 5px solid rgba(0, 121, 201, 0.4);
   top: -15%;
   left: -15%;
   background: rgba(198, 16, 0, 0);
@@ -1718,7 +1718,7 @@ section {
 
 .contact .info-item {
   width: 100%;
-  background-color: #009282;
+  background-color: #02669c;
   margin-bottom: 20px;
   padding: 20px;
   border-radius: 10px;
@@ -1961,7 +1961,7 @@ section {
   padding: 60px 30px;
   position: relative;
   overflow: hidden;
-  background: #008d7d;
+  background: rgb(0, 98, 150);
   box-shadow: 0 0 29px 0 rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
@@ -1993,7 +1993,7 @@ section {
 }
 
 .hero .icon-box:hover {
-  background: #009786;
+  background: #006ba5;
 }
 
 .hero .icon-box:hover .title a,
@@ -2533,7 +2533,7 @@ section {
 
 .blog .comments .reply-form textarea:focus {
   box-shadow: none;
-  border-color: rgba(0, 131, 116, 0.8);
+  border-color: #0077b6;
 }
 
 .blog .comments .reply-form .form-group {
