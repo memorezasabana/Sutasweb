@@ -4,7 +4,6 @@ session_start();
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,9 +22,7 @@ session_start();
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -37,33 +34,7 @@ session_start();
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Impact
-  * Updated: Jan 30 2024 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-</head>
-
 <body>
-
-  <!-- ======= Header ======= -->
-  <!-- <section id="topbar" class="topbar d-flex align-items-center">
-    <div class="container d-flex justify-content-center justify-content-md-between">
-      <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
-        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
-      </div>
-      <div class="social-links d-none d-md-flex align-items-center">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-      </div>
-    </div> -->
-  <!-- </section> -->
-  <!-- End Top Bar -->
 
   <header id="header" class="header d-flex align-items-center">
 
@@ -79,22 +50,12 @@ session_start();
           <li class="dropdown"><a href="#"><span>Layanan</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li><a href="#">Lapor Bencana</a></li>
-              <!-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li> -->
               <li><a href="#">Kontak Darurat</a></li>
               <li><a href="#">Panduan Evakuasi</a></li>
               <li><a href="#">Edukasi Bencana</a></li>
             </ul>
           </li>
           <li><a href="#services">Tentang Kami</a></li>
-          <!-- <li><a href="#contact">Kritik & Saran</a></li> -->
         </ul>
       </nav><!-- .navbar -->
 
@@ -106,85 +67,98 @@ session_start();
   <!-- End Header -->
 
   <main id="main">
-        <!-- ======= Contact Section ======= -->
-        <section id="contact" class="contact">
-          <div class="container" data-aos="fade-up">
-    
-            <div class="section-header">
-              <h2>Laporkan Bencana</h2>
-              <p>Segera Laporkan Bencana di Tempat Anda</p>
-            </div>
-    
-            <div class="row gx-lg-0 gy-4">
-    
-              <div class="col-lg-4">
-    
-                <div class="info-container d-flex flex-column align-items-center justify-content-center">
-                  <div class="info-item d-flex">
-                    <i class="bi bi-geo-alt flex-shrink-0"></i>
-                    <div>
-                      <h4>Lokasi:</h4>
-                      <p>Jl. Jemursari Tim. II No.2, Jemur Wonosari, Kec. Wonocolo, Surabaya, Jawa Timur 60237</p>
-                    </div>
-                  </div><!-- End Info Item -->
-    
-                  <div class="info-item d-flex">
-                    <i class="bi bi-envelope flex-shrink-0"></i>
-                    <div>
-                      <h4>Email:</h4>
-                      <p>memoreza@gmail.com</p>
-                    </div>
-                  </div><!-- End Info Item -->
-    
-                  <div class="info-item d-flex">
-                    <i class="bi bi-phone flex-shrink-0"></i>
-                    <div>
-                      <h4>Hotline:</h4>
-                      <p>+62 85156557893</p>
-                    </div>
-                  </div><!-- End Info Item -->
-    
-                  <div class="info-item d-flex">
-                    <i class="bi bi-clock flex-shrink-0"></i>
-                    <div>
-                      <h4>Jam Kerja:</h4>
-                      <p>24 Jam</p>
-                    </div>
-                  </div><!-- End Info Item -->
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Laporkan Bencana</h2>
+          <p>Segera Laporkan Bencana di Tempat Anda</p>
+        </div>
+
+        <div class="row gx-lg-0 gy-4">
+
+          <div class="col-lg-4">
+
+            <div class="info-container d-flex flex-column align-items-center justify-content-center">
+              <div class="info-item d-flex">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h4>Lokasi:</h4>
+                  <p>Jl. Jemursari Tim. II No.2, Jemur Wonosari, Kec. Wonocolo, Surabaya, Jawa Timur 60237</p>
                 </div>
-    
-              </div>
-    
-              <div class="col-lg-8">
-                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                  <div class="row">
-                    <div class="col-md-6 form-group">
-                      <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="col-md-6 form-group mt-3 mt-md-0">
-                      <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                    </div>
-                  </div>
-                  <div class="form-group mt-3">
-                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-                  </div>
-                  <div class="form-group mt-3">
-                    <textarea class="form-control" name="message" rows="7" placeholder="Message" required></textarea>
-                  </div>
-                  <div class="my-3">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-                  </div>
-                  <div class="text-center"><button type="submit">Send Message</button></div>
-                </form>
-              </div><!-- End Contact Form -->
-    
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h4>Email:</h4>
+                  <p>memoreza@gmail.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-phone flex-shrink-0"></i>
+                <div>
+                  <h4>Hotline:</h4>
+                  <p>+62 85156557893</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-clock flex-shrink-0"></i>
+                <div>
+                  <h4>Jam Kerja:</h4>
+                  <p>24 Jam</p>
+                </div>
+              </div><!-- End Info Item -->
             </div>
-    
+
           </div>
-        </section><!-- End Contact Section -->
-    
+
+          <div class="col-lg-8">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form" enctype="multipart/form-data">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="title" id="title" placeholder="Title" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="description" rows="7" placeholder="Description" required></textarea>
+              </div>
+              <div class="form-group mt-3">
+                <input type="number" class="form-control" name="latitude" id="latitude" placeholder="Latitude" required>
+              </div>
+              <div class="form-group mt-3">
+                <input type="number" class="form-control" name="longitude" id="longitude" placeholder="Longitude" required>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="status" id="status" placeholder="Status" required>
+              </div>
+              <div class="form-group mt-3">
+                <input type="file" class="form-control" name="image" id="image" required>
+              </div>
+
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
 
   </main><!-- End #main -->
 
@@ -260,8 +234,7 @@ session_start();
   </footer><!-- End Footer -->
   <!-- End Footer -->
 
-  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <div id="preloader"></div>
 

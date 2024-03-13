@@ -1,41 +1,45 @@
 <?php
-  /**
-  * Requires the "PHP Email Form" library
-  * The "PHP Email Form" library is available only in the pro version of the template
-  * The library should be uploaded to: vendor/php-email-form/php-email-form.php
-  * For more info and help: https://bootstrapmade.com/php-email-form/
-  */
+include '../config/connection.php'; // Sertakan file koneksi.php untuk menghubungkan ke database
 
-  // Replace contact@example.com with your real receiving email address
-  // $receiving_email_address = 'contact@example.com';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // Tangkap data yang dikirimkan melalui form
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $title = $_POST['title'];
+  $description = $_POST['description'];
+  $latitude = $_POST['latitude'];
+  $longitude = $_POST['longitude'];
+  $status = $_POST['status'];
 
-  // if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
-  //   include( $php_email_form );
-  // } else {
-  //   die( 'Unable to load the "PHP Email Form" Library!');
-  // }
+  // Simpan data pengguna ke tabel users
+  $sql = "INSERT INTO users (name, email) VALUES ('$name', '$email')";
+  mysqli_query($connection, $sql);
 
-  // $contact = new PHP_Email_Form;
-  // $contact->ajax = true;
-  
-  // $contact->to = $receiving_email_address;
-  // $contact->from_name = $_POST['name'];
-  // $contact->from_email = $_POST['email'];
-  // $contact->subject = $_POST['subject'];
+  // Dapatkan ID pengguna yang baru saja disimpan
+  $id_user = mysqli_insert_id($connection);
 
-  // // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  // /*
-  // $contact->smtp = array(
-  //   'host' => 'example.com',
-  //   'username' => 'example',
-  //   'password' => 'pass',
-  //   'port' => '587'
-  // );
-  // */
+  // Simpan data bencana ke tabel disasters
+  $sql = "INSERT INTO disasters (id_user, title, description, latitude, longitude, status) 
+VALUES ('$id_user', '$title', '$description', '$latitude', '$longitude', '$status')";
+  mysqli_query($connection, $sql);
 
-  // $contact->add_message( $_POST['name'], 'From');
-  // $contact->add_message( $_POST['email'], 'Email');
-  // $contact->add_message( $_POST['message'], 'Message', 10);
+  // Dapatkan ID bencana yang baru saja disimpan
+  $id_disaster = mysqli_insert_id($connection);
 
-  // echo $contact->send();
-?>
+  // Simpan file gambar ke dalam folder uploads
+  $image = $_FILES['image'];
+  $image_name = $image['name'];
+  $image_tmp = $image['tmp_name'];
+  move_uploaded_file($image_tmp, '../uploads/' . $image_name);
+
+  // Simpan nama file gambar ke dalam tabel images
+  $sql = "INSERT INTO images (id_disaster, name) VALUES ('$id_disaster', '$image_name')";
+  mysqli_query($connection, $sql);
+
+
+  // Tampilkan pesan bahwa data telah berhasil disimpan
+  echo "Data has been saved successfully.";
+} else {
+  // Jika bukan metode POST, kembalikan pengguna ke halaman sebelumnya
+  header("Location: ../index.php");
+}
