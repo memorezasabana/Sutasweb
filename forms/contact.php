@@ -38,7 +38,7 @@ VALUES ('$id_user', '$title', '$description', '$latitude', '$longitude', '$statu
 
 
   // Tampilkan pesan bahwa data telah berhasil disimpan
-  echo "Data has been saved successfully.";
+  echo "Sukses mengirimkan laporan bencana!";
 } else {
   // Jika bukan metode POST, kembalikan pengguna ke halaman sebelumnya
   header("Location: ../index.php");

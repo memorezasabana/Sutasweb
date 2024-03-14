@@ -127,7 +127,14 @@ session_start();
                 </div>
               </div>
               <div class="form-group mt-3">
-                <input type="text" class="form-control" name="title" id="title" placeholder="Title" required>
+                <select class="form-control" name="title" id="title" required>
+                  <option value="">Pilih jenis bencana</option>
+                  <option value="Tanah longsor">Tanah longsor</option>
+                  <option value="Kebakaran">Kebakaran</option>
+                  <option value="Angin Puting Beliung">Angin Puting Beliung</option>
+                  <option value="Banjir">Banjir</option>
+                  <option value="Evakuasi">Evakuasi</option>
+                </select>
               </div>
               <div class="form-group mt-3">
                 <textarea class="form-control" name="description" rows="7" placeholder="Description" required></textarea>
@@ -150,6 +157,7 @@ session_start();
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
+              
               <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
           </div><!-- End Contact Form -->
