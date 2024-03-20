@@ -1,3 +1,9 @@
+<?php
+include "config/connection.php";
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,9 +22,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -30,64 +34,28 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Impact
-  * Updated: Jan 30 2024 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
-
-  <!-- ======= Header ======= -->
-  <!-- <section id="topbar" class="topbar d-flex align-items-center">
-    <div class="container d-flex justify-content-center justify-content-md-between">
-      <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
-        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
-      </div>
-      <div class="social-links d-none d-md-flex align-items-center">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-      </div>
-    </div> -->
-  <!-- </section> -->
-  <!-- End Top Bar -->
 
   <header id="header" class="header d-flex align-items-center">
 
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
       <a href="index.php" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1>Sutas<span>.</span></h1>
       </a>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="#hero">Beranda</a></li>
+          <li><a href="#beranda">Beranda</a></li>
           <li class="dropdown"><a href="#"><span>Layanan</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li><a href="">Lapor Bencana</a></li>
-              <!-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li> -->
               <li><a href="#">Kontak Darurat</a></li>
               <li><a href="#">Panduan Evakuasi</a></li>
               <li><a href="#">Edukasi Bencana</a></li>
             </ul>
           </li>
           <li><a href="#services">Tentang Kami</a></li>
-          <!-- <li><a href="#contact">Kritik & Saran</a></li> -->
         </ul>
       </nav><!-- .navbar -->
 
@@ -99,18 +67,25 @@
   <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero">
+  <section id="beranda" class="hero">
     <div class="container position-relative">
       <div class="row gy-5" data-aos="fade-in">
         <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
-          <h2>Selamat Datang, </h2>
+          <h2>Sutas, </h2>
           <p>Sampaikan Laporan Bencana Langsung ke Pemerintah
             <br>Wujudkan Keselamatan Bersama!
           </p>
           <div class="d-flex justify-content-center justify-content-lg-start">
-            <a href="form_lapor.php" class="btn-get-started">Laporkan Bencana</a>
-            <!-- <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> -->
+            <?php
+            if (isset($_SESSION['username'])) {
+              echo '<a href="dashboard/user-home.php" class="btn-get-started">Dashboard</a>';
+            } else {
+              echo '<a href="auth/form-login.php" class="btn-get-started">Masuk</a>';
+              echo '<a href="auth/form-register.php" class="btn-watch-video d-flex align-items-center"><span>Daftar Akun</span></a>';
+            }
+            ?>
           </div>
+
         </div>
         <div class="col-lg-6 order-1 order-lg-2">
           <img src="assets/img/hero-img.svg" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="100">
@@ -243,26 +218,22 @@
             <div class="col-lg-6">
 
               <div class="stats-item d-flex align-items-center">
-                <span data-purecounter-start="0" data-purecounter-end="411" data-purecounter-duration="1"
-                  class="purecounter"></span>
+                <span data-purecounter-start="0" data-purecounter-end="411" data-purecounter-duration="1" class="purecounter"></span>
                 <p><strong>Bencana Alam</strong> </p>
               </div><!-- End Stats Item -->
 
               <div class="stats-item d-flex align-items-center">
-                <span data-purecounter-start="0" data-purecounter-end="53" data-purecounter-duration="1"
-                  class="purecounter"></span>
+                <span data-purecounter-start="0" data-purecounter-end="53" data-purecounter-duration="1" class="purecounter"></span>
                 <p><strong>Meninggal Dunia</strong> </p>
               </div><!-- End Stats Item -->
 
               <div class="stats-item d-flex align-items-center">
-                <span data-purecounter-start="0" data-purecounter-end="129" data-purecounter-duration="1"
-                  class="purecounter"></span>
+                <span data-purecounter-start="0" data-purecounter-end="129" data-purecounter-duration="1" class="purecounter"></span>
                 <p><strong>Luka-Luka</strong></p>
               </div><!-- End Stats Item -->
 
               <div class="stats-item d-flex align-items-center">
-                <span data-purecounter-start="0" data-purecounter-end="1673238" data-purecounter-duration="1"
-                  class="purecounter"></span>
+                <span data-purecounter-start="0" data-purecounter-end="1673238" data-purecounter-duration="1" class="purecounter"></span>
                 <p><strong>Mengungsi dan Menderita</strong></p>
               </div><!-- End Stats Item -->
 
@@ -310,8 +281,7 @@
 
               <div class="accordion-item">
                 <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#faq-content-1">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
                     <span class="num">1.</span>
                     Bagaimana meningkatkan kesiapsiagaan bencana?
                   </button>
@@ -330,8 +300,7 @@
 
               <div class="accordion-item">
                 <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#faq-content-2">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
                     <span class="num">2.</span>
                     Apa yang harus dilakukan saat terjebak dalam situasi darurat?
                   </button>
@@ -347,8 +316,7 @@
 
               <div class="accordion-item">
                 <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#faq-content-3">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
                     <span class="num">3.</span>
                     Bagaimana akses layanan medis darurat?
                   </button>
@@ -366,8 +334,7 @@
 
               <div class="accordion-item">
                 <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#faq-content-4">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-4">
                     <span class="num">4.</span>
                     Apa langkah-langkah pemulihan setelah bencana?
                   </button>
@@ -383,8 +350,7 @@
 
               <div class="accordion-item">
                 <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#faq-content-5">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-5">
                     <span class="num">5.</span>
                     Bagaimana cara mencegah kecelakaan selama bencana?
                   </button>
@@ -653,8 +619,7 @@
   </footer><!-- End Footer -->
   <!-- End Footer -->
 
-  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <div id="preloader"></div>
 

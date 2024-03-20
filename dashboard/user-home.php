@@ -40,21 +40,13 @@ session_start();
     <header id="header" class="header d-flex align-items-center">
 
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-            <a href="index.php" class="logo d-flex align-items-center">
+            <a href="../index.php" class="logo d-flex align-items-center">
                 <h1>Sutas<span>.</span></h1>
             </a>
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a href="#hero">Beranda</a></li>
-                    <li class="dropdown"><a href="#"><span>Layanan</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                        <ul>
-                            <li><a href="">Lapor Bencana</a></li>
-                            <li><a href="#">Kontak Darurat</a></li>
-                            <li><a href="#">Panduan Evakuasi</a></li>
-                            <li><a href="#">Edukasi Bencana</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#services">Tentang Kami</a></li>
+                    <li><a href="../index.php#beranda">Beranda</a></li>
+                    <li><a href="#dashboard-user">Dashboard</a></li>
                 </ul>
             </nav>
 
@@ -63,6 +55,46 @@ session_start();
 
         </div>
     </header>
+
+    <!-- ======= Hero Section ======= -->
+    <section id="dashboard-user" class="hero">
+        <div class="container position-relative">
+            <div class="row gy-5" data-aos="fade-in">
+                <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
+                    <?php
+                    // Check if the user is logged in
+                    if (isset($_SESSION['username'])) {
+                        $name = $_SESSION['username'];
+                        echo "<h2>Selamat Datang, <u>$name</u></h2>";
+                    } else {
+                        header("Location: ../index.php");
+                        exit();
+                    }
+                    ?>
+                    <p>Sampaikan Laporan Bencana Langsung ke Pemerintah
+                        <br>Wujudkan Keselamatan Bersama!
+                    </p>
+                    <div class="d-flex justify-content-center justify-content-lg-start">
+                        <a href="form-lapor.php" class="btn-get-started">Laporkan Bencana</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2">
+                    <img src="../assets/img/hero-img.svg" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="100">
+                </div>
+            </div>
+        </div>
+
+        <div class="icon-boxes position-relative">
+            <div class="container position-relative">
+                <div class="row gy-4 mt-5">
+
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </section>
+    <!-- End Hero Section -->
 
     <!-- Vendor JS Files -->
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
